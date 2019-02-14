@@ -2,14 +2,21 @@ extends layouts/default.pug
 
 block content
   main
-    h1 Welcome
-    .post
-      h2 First Post
-      img(src='images/forest.jpg')
+    h1 Goals of the Website
 
-      +codeSingle('javascript', 'var name = "bob";')
+    p goals...
 
-      p 
-        |Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, est ipsam. Libero et, ullam necessitatibus tempore consectetur vitae quasi animi? 
-        span.code var n = 4;
-        |Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, suscipit?
+    h4 Table of Contents
+    ul
+      li
+        a(href="data.html") Working with Data
+      li
+        a(href="functions.html") Functions and Objects
+      li
+        a(href="dom1.html") Javascript and the DOM: Part 1
+      li
+        a(href="dom2.html") Javascript and the DOM: Part 2
+      li
+        a(href="loops.html") Loops
+      li
+        a(href="validating.html") Validating and Minifying Javascript
