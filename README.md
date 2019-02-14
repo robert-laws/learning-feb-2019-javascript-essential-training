@@ -15,9 +15,9 @@
 
 ## Functions and Objects
 
-## Javascript and the DOM Part 1
+## Javascript and the DOM: Part 1
 
-## Javascript and the DOM Part 2
+## Javascript and the DOM: Part 2
 
 ## Loops
 
