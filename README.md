@@ -2,6 +2,8 @@
 
 [Website for Course]()
 
+*netlify link*
+
 **Table of Contents**
 
 * [Working with Data](#working-with-data)
@@ -10,6 +12,8 @@
 * [Javascript and the DOM: Part 2](#javascript-and-the-dom-part-2)
 * [Loops](loops)
 * [Validating and Minifying Javascript](validating-and-minifying-javascript)
+
+---
 
 ## CSS Basics
 
