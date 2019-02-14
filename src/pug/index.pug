@@ -1,7 +1,15 @@
 extends layouts/default.pug
 
 block content
-  h1 Welcome
-  .post
-    h2 First Post
-    img(src='images/forest.jpg')
+  main
+    h1 Welcome
+    .post
+      h2 First Post
+      img(src='images/forest.jpg')
+
+      +codeSingle('javascript', 'var name = "bob";')
+
+      p 
+        |Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, est ipsam. Libero et, ullam necessitatibus tempore consectetur vitae quasi animi? 
+        span.code var n = 4;
+        |Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, suscipit?

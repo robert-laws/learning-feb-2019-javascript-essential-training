@@ -1,8 +1,16 @@
 // ABSTRACTS
 @import "abstracts/variables";
+@import "abstracts/colors";
+@import "abstracts/global-resets";
 
 // LAYOUTS
+@import "layouts/globals";
 @import "layouts/header";
+@import "layouts/main";
+@import "layouts/footer";
 
 // COMPONENTS
 @import "components/post";
+
+// HELPERS
+@import "helpers/syntax";
