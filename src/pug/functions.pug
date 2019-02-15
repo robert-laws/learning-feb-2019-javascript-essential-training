@@ -3,3 +3,26 @@ extends layouts/default.pug
 block content
   main
     h1 Functions and Objects
+
+    p Javascript uses functions to perform actions on data or return information. Objects hold data in key, value pairs.
+
+    h6 Functions
+
+    p There are primarily three different types of functions:
+
+    ul
+      li Named functions
+      li Anonymous functions
+      li Immediately invoked function expressions
+
+    p Named Functions - are given a name and called using that name
+
+    +codeMulti('Javascript', 'function nameOfFunction(arguments) {', '  code block', '}')
+
+    p Anonymous Functions - are stored in a variable and used by calling the variable as a function
+
+    +codeMulti('Javascript', 'var math = function() {', '  var result = 2 + 3;', '  return result;', '}', 'math();')
+
+    p Immediately invoked function expressions - will run as soon as the browser finds it
+
+    +codeMulti('Javascript', '(function() {', '  var result = 2 + 3;', '}());')
