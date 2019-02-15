@@ -163,3 +163,21 @@ block content
       | - removes the number of items beginning from the position entered. Returns a new array with the values removed.
 
     +codeMulti('Javascript', 'var names = ["bob", "hal", "ned", "kal", "tad"];', 'names.splice(2, 2); // ["ned", "kal"]', 'names = ["bob", "hal", "tad"]')
+
+    p 
+      strong .slice(position) 
+      |- creates a new array beginning from the position indicated. Does not modify the original array.
+
+    +codeMulti('Javascript', 'var names = ["bob", "hal", "ned", "tad", "mel"];', 'names.slice(3); // ["tad", "mel"]', 'names = ["ned", "hal", "bob", "tad", "mel"]')
+
+    p 
+      strong .indexOf(value to match, index) 
+      |- returns the index number for the result that matches the value or -1 if there is no match found and begins searching from the index value given.
+
+    +codeMulti('Javascript', 'var names = ["bob", "hal", "ned", "tad", "mel"];', 'names.indexOf("hal", 0); // 1')
+
+    p
+      strong .join(separator) 
+      |- returns a string with all the items separated by a common (if no argument is given).
+
+    +codeMulti('Javascript', 'var names = ["bob", "hal", "ned", "tad", "mel"];', 'names.join(" - "); // "bob - hal - ned - tad - mel"')
