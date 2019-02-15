@@ -1,6 +1,6 @@
 # Learning - Lynda: Javascript Essential Training
 
-[Website for Course]()
+[Website for Course](https://learning-feb-2019-javascript-essential-training.netlify.com)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/47da4dd3-3f91-41bb-929a-016fa73ca8f2/deploy-status)](https://app.netlify.com/sites/learning-feb-2019-javascript-essential-training/deploys)
 
@@ -17,6 +17,8 @@
 
 ## Working with Data
 
+Equality and Strict Equality comparisons
+
 ```javascript
 var a = 4;
 var b = '4';
@@ -25,6 +27,21 @@ a === b ? true : false; // false
 ```
 
 ## Functions and Objects
+
+Declaring a object constructor
+
+```javascript
+function Person(name, age, location) {
+  this.name = name;
+  this.age = age;
+  this.location = location;
+  this.updateAge = function() {
+    return ++this.age;
+  }
+}
+
+var person01 = new Person("Bob Cobb", 23, "New York");
+```
 
 ## Javascript and the DOM: Part 1
 
