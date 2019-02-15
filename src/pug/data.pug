@@ -4,10 +4,162 @@ block content
   main
     h1 Working with Data
 
-    p Javascript has a few different data types. This page will give some examples.
+    p Javascript has a few different data types. These include Numeric, String, Boolean, null, undefined, and Symbol (from ES2015).
+
+    hr
 
     h4 Variables
 
-    p A basic principle of programming is the concept of a variable. In Javascript, variables are used to store and retrieve information.
+    p A basic principle of programming is the concept of a variable. In Javascript, variables are used to store and retrieve data.
 
-    +codeMulti('Javascript', 'var a = 5;', 'var name = "bob"')
+    +codeMulti('Javascript', 'var a = 5; // Numeric', 'var name = "bob"; // String', 'var complete = true; // Boolean')
+
+    p Undefined occurs when a variable is declared but no value is set. 
+      
+    p 
+      |The built-in function 
+      span.code typeof
+      | can be used to check the data type of some data or a variable.
+
+    +codeSingle('Javascript', 'typeof(32); // number')
+
+    p Assignment is expressed by using the 
+      span.code =
+      |operator
+
+    p Javascript supports several arithmetic operations including addition, subtraction, multiplication, and division.
+
+    h6 Unary Operators
+
+    p Using the shorthand 
+      span.code ++
+      |or 
+      span.code --
+      |it's possible to add or subtract one from a number.
+
+    +codeMulti('Javascript', 'var a = 1;', 'a++; // a = 2')
+
+    h6 Illogical Operations
+
+    p Attempts to divide a number by a string will results in the return of 
+      span.code NaN
+      |which means Not a Number.
+
+    +codeMulti('Javascript', 'var a = 42;', 'var b = "hal";', 'a/b; // NaN')
+
+    h6 Conditional Statements
+
+    p Using the 
+      span.code if
+      |statement allows programmers to check a condition and do particular operations based on the outcome of the condition.
+
+    +codeMulti('Javascript', 'if(condition) {', '  Do something', '} else {', '  Do something else', '}')
+
+    p The condition usually involves some type of comparison. This can be done using the 
+      span.code ==
+      |symbol for comparison of content. However, there are instances where it's necessary to perform strict comparison and that is done using the 
+      span.code ===
+      |symbol for strict comparison.
+
+    +codeMulti('Javascript', 'a = 4; b = "4"', 'if (a == b) {', '  return true;', '} else {', '  return false;', '}', '// true')
+
+    p The example above shows basic equality comparisons - the variables a and b both have the value 4 - one as a number and one as a string. Based on the basic equality comparison they are equal. However, using strict equality gives a different result, shown below.
+
+    +codeMulti('Javascript', 'a = 4; b = "4"', 'if (a === b) {', '  return true;', '} else {', '  return false;', '}', '// false')
+
+    p Other comparisons can be done using other comparison operators, including 
+      span.code <
+      |, 
+      span.code <=
+      |, 
+      span.code >
+      |, 
+      span.code >=
+      |, 
+      span.code !=
+      |, or 
+      span.code !==
+
+    p Additionally, logical operators are available for building complex comparisons. First, there is the logical AND 
+      span.code &&
+      | and the logical OR 
+      span.code ||
+      |.
+
+    p Using a combination of the AND and OR it is possible to create an XOR logical operator comparison.
+
+    +codeSingle('Javascript', 'if((a == b || c == d) && ((a == b) != (c == d)) {}')
+
+    h6 Ternary Operator
+
+    p Is a shorthand for the 
+      span.code if
+      |conditional statement.
+
+    +codeSingle('Javascript', 'condition ? true : false;')
+
+    +codeMulti('Javascript', 'a = 3;', 'b = 10;', 'a == b ? "Match found" : "No match found";', '// No match found')
+
+    h6 Arrays
+
+    p Storing multiple pieces of data in one variable is done with an array.
+
+    +codeMulti('Javascript', 'var names = ["bob", "hal", "ned"];', 'names[2]; // ned')
+
+    p Arrays come with built-in properties and methods. An example of a property for an array is 
+      span.code length
+      |.
+
+    +codeMulti('Javascript', 'var names = ["bob", "hal", "ned"];', 'names.length; // 3')
+
+    p There are several methods available for arrays. Some of the most common methods are 
+      span.code reverse()
+      |, 
+      span.code shift()
+      |, 
+      span.code unshift()
+      |, 
+      span.code pop()
+      |, 
+      span.code push()
+      |, and 
+      span.code splice()
+      |.
+
+    h6 Array Methods
+
+    p 
+      strong .reverse() 
+      |- reverses the order of the values in the array.
+
+    +codeMulti('Javascript', 'var names = ["bob", "hal", "ned"];', 'names.reverse(); // "ned", "hal", "bob"')
+
+    p 
+      strong .shift() 
+      |- removes and returns first value of array.
+
+    +codeMulti('Javascript', 'var names = ["bob", "hal", "ned"];', 'names.shift(); // "bob"')
+
+    p 
+      strong .unshift('value') 
+      |- adds one or move values to the front of the array.
+
+    +codeMulti('Javascript', 'var names = ["bob", "hal", "ned"];', 'names.unshift("kalvin"); // 4', 'names = ["kalvin", "ned", "hal", "bob"]')
+
+    p 
+      strong .pop() 
+      |- removes and returns the last value of the array.
+
+    +codeMulti('Javascript', 'var names = ["bob", "hal", "ned"];', 'names.pop(); // "ned"')
+
+    p 
+      strong .push('value') 
+      |- adds one or more values to the end of the array.
+
+    +codeMulti('Javascript', 'var names = ["bob", "hal", "ned"];', 'names.push("teddy"); // 4', 'names = ["ned", "hal", "bob", "teddy"]')
+
+    p 
+      strong .splice(position, number)
+      | - removes the number of items beginning from the position entered. Returns a new array with the values removed.
+
+    +codeMulti('Javascript', 'var names = ["bob", "hal", "ned", "kal", "tad"];', 'names.splice(2, 2); // ["ned", "kal"]', 'names = ["bob", "hal", "tad"]')
