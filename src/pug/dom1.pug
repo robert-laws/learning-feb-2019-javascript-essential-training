@@ -20,4 +20,99 @@ block content
 
     +codeMulti('Javascript', 'document.querySelector(".main-nav a")', 'document.querySelectorAll(".post-content p")')
 
+    h6 Accessing and Changing Elements
+
+    p DOM elements have several different properties available. Some can be changed via Javascript.
+
+    +codeMulti('Javascript', 'document.querySelector(".main-title").innerHTML; // Page Title', 'document.querySelector(".main-title").outerHTML; // <h2 class="main-title">Page Title</h2>', 'document.querySelector(".main-title").innerHTML = "New Page Title"; // changes the page title')
+
+    p It is also possible to select and work with 
+      span.code ID
+      |and 
+      span.code CLASS
+      |values.
+
+    +codeMulti('Javascript', 'document.querySelector("#address").id = "currentAddress"', 'document.querySelector(".main-title").className; // "main-title blue" - returns a string with all class names', 'document.querySelector(".main-title").classList; // returns an array of the class names', 'document.querySelector(".main-title").classList[1]; // returns "blue"')
+
+    h6 Targeting and Changing Classes
+
+    p A class is a read-only property, but the Javascript API provides methods that allow classes to be modified. For example, here are some methods available for the 
+      span.code classList
+      |property.
+
+    +codeMulti('Javascript', 'document.querySelector(".main-title").classList.add("new-class-name"); // The .add method will add a new class name', 'document.querySelector(".main-title").classList.remove("blue"); // The .blue class will be removed', 'document.querySelector(".main-title").classList.toggle("blue");', '// The first time toggle is used will remove the class, the second time will add it back', 'document.querySelector(".main-title").classList.contains("blue");', '// The method .contains will return a boolean true or false if the class name is present or not')
+
+    p Useful Link: 
+      a(href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList") Element.classList property documentation
+
+    h6 Targeting and Changing Attributes
+
+    p Attributes can be accessed and manipulated like classes. Attributes can be accessed and worked on using the methods: 
+      span.code .hasAttribute()
+      |, 
+      span.code .getAttribute()
+      |, 
+      span.code .setAttribute(name, value)
+      |, and 
+      span.code .removeAttribute()
+      |.
+
+    +codeMulti('Javascript', 'const CTAELEMENT = document.querySelector(".cta a");', 'CTAELEMENT.attributes; // returns an NamedNodeMap', 'if CTAELEMENT.hasAttribute("target")) {', '  console.log(CTAELEMENT.getAttribute("target"));', '} else {', '  CTAELEMENT.setAttribute("target", "_blank");', '}', '// result would be - <a href="#" target="_blank">Book Now!</a>')
+
+    h6 Adding New DOM Elements
+
+    p The process for adding new DOM elements can be broken down into steps:
+
+    ol
+      li Create the element
+      li Create the text node that goes inside the element
+      li Add the text node to the element
+      li Add the element to the DOM tree
+
+    p Some methods are also needed to add Elements to the DOM. They include: 
+      span.code .createElement()
+      |, 
+      span.code .createTextNode()
+      |, and 
+      span.code .appendChild()
+      |.
+
+    p The following code shows how to dive into 
+      span.code figure
+      | and 
+      span.code image
+      |HTML elements and add a 
+      span.code figcaption
+      |element.
+
+    +codeMulti('Javascript', 'const FEATURED = document.querySelector(".featured-image");', 'const THEIMAGE = FEATURED.querySelector("img");', 'var altText = THEIMAGE.getAttribute("alt");', 'var captionElement = document.createElement("figcaption");', 'var captionText = document.createTextNode(altText);', 'captionElement.appendChild(captionText);', 'FEATURED.appendChild(captionElement);', 'THEIMAGE.setAttribute("alt", "");')
+
+    p There's a new method that simplifies the above procedure. It's called 
+      span.code .append()
+      |. The above code can be modified in the following way and achieve the same result.
+
+    +codeMulti('Javascript', 'const FEATURED = document.querySelector(".featured-image");', 'const THEIMAGE = FEATURED.querySelector("img");', 'var altText = THEIMAGE.getAttribute("alt");', 'var captionElement = document.createElement("figcaption");', 'captionElement.append(altText);', 'FEATURED.append(captionElement);', 'THEIMAGE.setAttribute("alt", "");')
+
+    h6 Apply Inline CSS to an Element
+
+    p Javascript can add inline CSS in the following way.
+
+    +codeMulti('Javascript', 'document.querySelector(".cta a").style.color = "green";', '// This produces <a href="#" style="color: green">Book Now!</a>')
+
+    p Style properties with hyphens change to camel case when working with Javascript.
+
+    +codeMulti('Javascript', 'document.querySelector(".cta a").style.backgroundColor = "blue";')
     
+    p Changes made to the inline styles will only modify that particular value, not other inline styles.
+
+    p To modify multiple CSS properties at once use 
+      span.code .cssText()
+      |to accomplish this.
+
+    +codeMulti('Javascript', 'document.querySelector(".cta a").style.cssText = "padding: 1em; color: white; background-color: red;";')
+
+    p It's also possible to approach updating CSS as working with an element and its attribute methods.
+
+    +codeMulti('Javascript', 'document.querySelector(".cta a").setAttribute("style", "padding: 2em; color: white; background-color: red;")')
+
+    p Inline styles will override defined CSS in stylesheets. A good practice is to define styles in CSS and add or remove classes to a DOM element.

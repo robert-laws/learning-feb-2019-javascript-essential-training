@@ -13,6 +13,10 @@ pre {
   background-color: $color-code-background;
   font-size: $font-base-text-size + 0.2rem;
 
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+
   span {
     padding: 0.25rem 2rem;
     position: relative;

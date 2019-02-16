@@ -40,8 +40,8 @@ p {
   font-size: $font-base-text-size;
 }
 
-ul {
-  margin-left: 2rem;
+ul, ol {
+  margin-left: 3rem;
 
   li {
     font-size: $font-base-text-size;
