@@ -22,3 +22,12 @@ if (document.getElementById("dom-1")) {
 
   console.log(firstPostTitle);
 }
+
+if (document.querySelector("#dom-toggle-button")) {
+  document.querySelector("#dom-toggle-button").addEventListener('click', function() {
+    // this.textContent = "Alert Off"
+    document.querySelector(".main-title").classList.toggle("alert");
+    document.querySelector(".main-title").style.fontSize = "30px";
+    document.querySelector("#dom-section-title").style.cssText = "color: green; margin-left: 4rem;";
+  })
+}

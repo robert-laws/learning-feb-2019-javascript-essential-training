@@ -45,6 +45,21 @@ var person01 = new Person("Bob Cobb", 23, "New York");
 
 ## Javascript and the DOM: Part 1
 
+A quick way to add or remove a class from an element
+
+```javascript
+document.querySelector(".main-title").classList.toggle("alert");
+```
+
+Two ways to use Javascript to add inline CSS to an element
+
+```javascript
+// update a single css property
+document.querySelector(".main-title").style.fontSize = "30px";
+// update multiple css properties
+document.querySelector("#dom-section-title").style.cssText = "color: green; margin-left: 4rem;";
+```
+
 ## Javascript and the DOM: Part 2
 
 ## Loops

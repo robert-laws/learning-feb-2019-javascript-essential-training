@@ -11,7 +11,7 @@ pre {
   border-radius: 0.5rem;
   border: 1px solid $color-code-border;
   background-color: $color-code-background;
-  font-size: $font-base-text-size + 0.2rem;
+  font-size: $font-size-website-default + 0.2rem;
 
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -25,7 +25,7 @@ pre {
     background-color: $color-code-name;
     border-radius: 0.5rem 0 0 0;
     font-weight: bold;
-    font-size: $font-base-text-size - 0.2rem;
+    font-size: $font-size-website-default - 0.2rem;
     color: $color-white;
   }
 }
@@ -36,5 +36,5 @@ span.code {
   margin: 0 5px 0 1px;
   padding: 1px 6px 1px 5px;
   font-family: $font-code-inline;
-  font-size: $font-base-text-size;
+  font-size: $font-size-website-default;
 }
