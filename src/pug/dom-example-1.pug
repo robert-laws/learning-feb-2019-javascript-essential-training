@@ -1,0 +1,36 @@
+extends layouts/default.pug
+
+block content
+  main
+    h1 Examples of Using Javascript with the DOM - part 1
+
+    section.blog-posts
+      article.post
+        header.post__header
+          h5 Post Title One
+          .post__meta
+            p by Bob Cobb | May 2018
+        section.post__content
+          p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, cupiditate fugiat explicabo inventore mollitia quos. Quam molestiae dicta laboriosam voluptates?
+          p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro blanditiis quas perferendis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi alias dignissimos laboriosam porro, id harum, minima accusantium deleniti quaerat pariatur maiores laborum cupiditate et non! Aspernatur expedita cum, numquam repudiandae hic repellat accusamus similique neque illum laborum officia consectetur. Omnis repellat atque hic, sit aut praesentium velit reprehenderit ad a magni consectetur nihil nesciunt!
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque at magni? Dolorem, fugit quasi officia molestias, maxime fuga ipsam animi provident, exercitationem voluptatem facere facilis dolores consequatur. Nisi, illo obcaecati. Voluptate dolor at perspiciatis perferendis quis reprehenderit autem quasi nostrum? Fugit odit sunt non.
+        footer.post__footer
+          p Tags: 
+            a(href="#") tag-one, 
+            a(href="#") tag-two
+      article.post
+        header.post__header
+          h5 Post Title Two
+          .post__meta 
+            p by Hal Hope | October 2018
+        section.post__content
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis incidunt id illo doloremque facere velit modi tenetur eius quas!
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima maiores nisi aspernatur ea at eligendi soluta, voluptatum, recusandae dolore, animi dignissimos natus! Velit officia ex reiciendis. Placeat mollitia dolor officiis dignissimos ipsam consectetur.
+        footer.post__footer
+          p Tags: 
+            a(href="#") tag-one, 
+            a(href="#") tag-two
+    
+    section.section-title
+      h6 DOM Examples
+    section.dom#dom-1

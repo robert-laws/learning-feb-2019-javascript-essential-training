@@ -3,3 +3,21 @@ extends layouts/default.pug
 block content
   main
     h1 Javascript and the DOM: Part 1
+
+    p Interacting with elements - or nodes within the document object - cab be done with javascript.
+
+    h6 Exploring the DOM
+
+    p The document object has some properties that can be accessed easily.
+
+    +codeMulti('Javascript', 'document.body; // The body element', 'document.title // The document title', 'document.URL; // The document URL')
+
+    p There are also several built-in methods available for targeting elements on the page.
+
+    +codeMulti('Javascript', 'document.getElementById("some-ID");', 'document.getElementsByClassName("classname")', 'document.getElementsByTagName("HTML tag")')
+
+    p Some more recent additions to the Javascript API enhance the ability to select DOM elements.
+
+    +codeMulti('Javascript', 'document.querySelector(".main-nav a")', 'document.querySelectorAll(".post-content p")')
+
+    
