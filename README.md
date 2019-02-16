@@ -4,7 +4,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/47da4dd3-3f91-41bb-929a-016fa73ca8f2/deploy-status)](https://app.netlify.com/sites/learning-feb-2019-javascript-essential-training/deploys)
 
-**Table of Contents**
+## Table of Contents
 
 * [Working with Data](#working-with-data)
 * [Functions and Objects](#functions-and-objects)
