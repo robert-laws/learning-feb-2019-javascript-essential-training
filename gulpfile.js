@@ -2,6 +2,7 @@ var gulp = require("gulp");
 var pug = require("gulp-pug");
 var sass = require("gulp-sass");
 var concat = require('gulp-concat')
+var imagemin = require('gulp-imagemin');
 var prefix = require("gulp-autoprefixer");
 var sourcemaps = require("gulp-sourcemaps");
 var del = require("del");
@@ -69,6 +70,7 @@ gulp.task('scripts', function() {
 
 gulp.task('images', function() {
   var stream = gulp.src(paths.images.src)
+    .pipe(imagemin())
     .pipe(gulp.dest(paths.images.dest));
   return stream;
 });
