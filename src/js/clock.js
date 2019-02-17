@@ -11,4 +11,3 @@ if (document.querySelector("#hour")) {
   MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
   SECONDHAND.style.transform = "rotate(" + secPosition + "deg)";
 }
-
