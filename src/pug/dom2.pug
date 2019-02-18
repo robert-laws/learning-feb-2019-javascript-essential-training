@@ -37,6 +37,20 @@ block content
       li Resets/submit - form-specific events
       li Mouse events - click, mouseover, drag, drop, etc.
 
-    
+    h6 Adding Events to DOM
 
-    
+    p Two of the most commons ways to add events to elements are the simple way of adding a Global Event Handler.
+
+    +codeMulti('Javascript', 'function logIt() {', '  console.log("button clicked");', '}', 'myButton = document.querySelector("button");', 'myButton.onclick = logIt;')
+
+    p A better way to add events to DOM elements is through use of the 
+      span.code .addEventListener()
+      |function.
+
+    +codeMulti('Javascript', 'function logIt() {', '  console.log("button clicked");', '}', 'myButton = document.querySelector("button");', 'myButton.addEventListener("click", logIt, false)')
+
+    p Anonymous functions can also be passed into the 
+      span.code .addEventListener()
+      |function.
+
+    +codeMulti('Javascript', 'myButton = document.querySelector("button");', 'myButton.addEventListener("click", function() { console.log("button clicked")}, false)')

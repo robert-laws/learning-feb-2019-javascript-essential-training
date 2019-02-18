@@ -1,0 +1,55 @@
+.cta {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .cta__heading {
+    flex: 0 24em;
+    text-align: center;
+    background-color: crimson;
+    border: 10px solid $color-black;
+
+    h1 {
+      color: $color-white;
+    }
+
+    h2 {
+      color: lighten($color-secondary, 55%);
+      text-shadow: 2px 2px 2px $color-black;
+    }
+
+    button {
+      border: none;
+      margin: 1rem 0;
+      padding: 2rem 4rem;
+      color: $color-white;
+      background-color: $color-primary;
+      font: {
+        size: $font-size-website-default * 1.2;
+        weight: bold;
+      }
+      box-shadow: 2px 2px 15px rgba($color-secondary, 0.25);
+      cursor: pointer;
+    }
+  }
+
+  .cta__text {
+    flex: 1;
+    display: flex;
+    background-color: lighten($color-primary, 38%);
+    border: 10px solid $color-black;
+
+    p {
+      flex: 1;
+      padding: 1rem;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.updateColor {
+  color: $color-white;
+}

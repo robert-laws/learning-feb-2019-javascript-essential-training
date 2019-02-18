@@ -62,6 +62,19 @@ document.querySelector("#dom-section-title").style.cssText = "color: green; marg
 
 ## Javascript and the DOM: Part 2
 
+Event Listeners and passing arguments and the element (e) that help the event interaction. This is done by using an anonymous function in the `.addEventListener()` function call.
+
+```javascript
+function changeColor(e, link) {
+  e.preventDefault();
+  link.innerHTML = "This has been clicked...";
+}
+
+CHANGE_COLOR.addEventListener('click', function(e) {
+  changeColor(e, this);
+}, false);
+```
+
 ## Loops
 
 ## Validating and Minifying Javascript
