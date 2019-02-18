@@ -3,3 +3,40 @@ extends layouts/default.pug
 block content
   main
     h1 Javascript and the DOM: Part 2
+
+    p Much of what happens within the browser are events that are fired. It is possible to use Javascript to interact with events and add interactivity to websites. The process of adding interactivity involves several things, including:
+
+    ul
+      li Attach an event to a DOM element
+      li Identify the type of event that should be detected
+      li Create a function that is called when the event fires
+
+    p Some examples of DOM events include:
+
+    ul
+      li Browser-level events (ex. load, window resize, etc.)
+      li DOM-level events - content interactions (ex. click, focus, submit, etc.)
+
+    p The full list of events is available from Mozilla at
+      a(href="https://developer.mozilla.org/en-US/docs/Web/Events") Event reference
+
+    h6 Common Browser-Level Events
+
+    ul
+      li Load - when a resources and dependents have loaded
+      li Error - when a resource failed to load
+      li Online/offline
+      li Resize - when the viewport is resized
+      li Scroll - when a viewport is scrolled up/down/left/right
+
+    h6 Common DOM Events
+
+    ul
+      li Focus - when an element receives focus (ex. clicked, tabbed to, etc.)
+      li Blur - when an element loses focus (ex. leaving form field)
+      li Resets/submit - form-specific events
+      li Mouse events - click, mouseover, drag, drop, etc.
+
+    
+
+    
