@@ -3,9 +3,26 @@ const ALERT = document.querySelector(".cta__heading h2");
 const CHANGE_COLOR = document.querySelector(".cta__text .change-color");
 const PARAGRAPHS = document.querySelectorAll(".cta__text p");
 const CTA_TEXT = document.querySelector(".cta__text");
+firstHeading = document.querySelector(".cta__heading h1");
 
-CTA.classList.remove("hide");
-ALERT.classList.add("hide");
+if(CTA) {
+  CTA.classList.remove("hide");
+  ALERT.classList.add("hide");
+  CTA.addEventListener("click", function() { reveal(this) }, false);
+  CTA.addEventListener("click", function() {
+  console.log("alert triggered");
+}, false);
+
+  CTA_TEXT.addEventListener('mouseenter', function() {
+    changeColorOnTouch()
+  }, false);
+  CTA_TEXT.addEventListener('mouseleave', function() { CTA_TEXT.removeAttribute("style")}, false);
+  CHANGE_COLOR.addEventListener('click', function(e) {
+    changeColor(e, this);
+  }, false);
+  firstHeading.addEventListener('click', showAlert, false);
+}
+
 
 function reveal(current) {
   current.innerHTML == "Click Here!" ? CTA.innerHTML = "Hello There..." : CTA.innerHTML = "Click Here!";
@@ -14,10 +31,7 @@ function reveal(current) {
 }
 
 //CTA.onclick = reveal; // Simple way to add event to an element
-CTA.addEventListener("click", function() { reveal(this) }, false);
-CTA.addEventListener("click", function() {
-  console.log("alert triggered");
-}, false);
+
 
 function changeColor(e, link) {
   e.preventDefault();
@@ -27,23 +41,16 @@ function changeColor(e, link) {
   }
 }
 
-CHANGE_COLOR.addEventListener('click', function(e) {
-  changeColor(e, this);
-}, false);
+
 
 function changeColorOnTouch() {
   CTA_TEXT.style.backgroundColor = "lightblue";
 }
 
-CTA_TEXT.addEventListener('mouseenter', function() {
-  changeColorOnTouch()
-}, false);
-CTA_TEXT.addEventListener('mouseleave', function() { CTA_TEXT.removeAttribute("style")}, false);
+
 
 function showAlert() {
   alert("heading clicked");
 }
 
-firstHeading = document.querySelector(".cta__heading h1");
-// firstHeading.onclick = showAlert;
-firstHeading.addEventListener('click', showAlert, false);
+
