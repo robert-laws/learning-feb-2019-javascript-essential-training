@@ -1,0 +1,84 @@
+.events {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__heading {
+    flex: 0 10rem;
+    background-color: darken($color-primary, 10%);
+    color: $color-white;
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  &__instruction {
+    flex: 0 5rem;
+    background-color: lighten($color-primary, 15%);
+    color: $color-white;
+    padding: 2rem;
+  }
+
+  &__text {
+    flex: 0;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+    p {
+      background-color: #DDD;
+      border-radius: 4px;
+      padding: 1.2rem;
+      width: 50%;
+      text-align: left;
+    }
+  }
+
+  &__typing {
+    flex: 0;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    padding: 0 0 3rem;
+    border-bottom: 1px solid $color-black;
+
+    textarea {
+      border: 5px solid $color-primary;
+      font-size: 2rem;
+      padding: 1rem;
+    }
+  }
+
+  &__tools {
+    flex: 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+
+    #{$self}__timer {
+      margin: 0 4rem;
+
+      h6 {
+        font-size: 3.8rem;
+      }
+    }
+
+    #{$self}__button {
+      margin: 0 4rem;
+      
+      button {
+        border: none;
+        padding: 1rem 2rem;
+        color: $color-white;
+        background-color: $color-primary;
+        cursor: pointer;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__footer {
+    flex: 0 0.5rem;
+  }
+}
