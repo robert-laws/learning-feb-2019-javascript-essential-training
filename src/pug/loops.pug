@@ -4,4 +4,42 @@ block content
   main
     h1 Loops
 
-    p Using loops to iterate over data is an essential part of Javascript. 
+    p Using loops to iterate over data is an essential part of Javascript. It offers the ability to work on multiple pieces of data through a single block of code.
+
+    h6 For Loop
+
+    +codeMulti('Javascript', 'for(var i = 0; i < 10; i++) {', '  console.log(i);', '}')
+
+    h6 While Loop
+
+    +codeMulti('Javascript', 'var i = 0;', 'while (i < 10) {', '  console.log(i);', '  i++;', '}')
+
+    h6 Do While
+
+    +codeMulti('Javascript', 'var i = 10;', 'var reps = 0;', 'if(i < 30) {', '  do {', '    ++reps;', '    console.log(reps + " reps gives us " + i);', '    i = i * 2.1;', '  } while (i < 30);', '} else {', '  console.log("i is bigger than 30.")', '}')
+
+    h6 Using Loops to work with Arrays
+
+    +codeMulti('Javascript', 'var externalLinks = document.querySelectorAll("a[href^="http"]");', 'for (var i = 0; i < externalLinks.length; i++) {', '  if(!externalLinks[i].hasAttribute("target")) {', '    externalLinks[i].setAttribute("target", "_blank");', '  }', '}')
+
+    h6 Break and Continue within Loops
+
+    p
+      strong break 
+      |will terminate the current loop and continue to the next statement
+
+    p
+      strong continue 
+      |will terminate the current iteration of the loop and continue to the next iteration of the loop
+
+    p Example of 
+      span.code break
+      |in action
+
+    +codeMulti('Javascript', 'const MIN = 0;', 'const MAX = 36;', 'var testNumber = 15;', 'var i = 1;', 'while(MAX) {', '  let randomNumber = Math.floor(Math.random() * (MAX - MIN)) + MIN;', '  if(randomNumber == testNumber) {', '    break;', '  }', '  console.log("Round " + i + ": " + randomNumber);', '  i++;', '}', 'console.log("The script went " + i + " rounds before finding " + testNumber + ".");')
+
+    p example of 
+      span.code continue
+      |in action
+
+    +codeMulti('Javascript', 'const CEILING = 100;', 'function primeTest(testValue) {', '  let isPrime = true;', '  for(let i = 2; i < testValue; i++) {', '    if(testValue % i === 0) {', '      isPrime = false;', '    }', '  }', '  return isPrime;', '}', '', 'for (let i = 2; i <= CEILING; i++) {', '  let result = primeTest(i);', '  if(result == false) {', '    continue;', '  }', '  console.log(i + " is a prime number");', '}')
