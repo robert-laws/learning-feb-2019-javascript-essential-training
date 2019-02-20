@@ -2,7 +2,7 @@
 
 const testWrapper = document.querySelector(".events__typing textarea");
 const testArea = document.querySelector(".type-area");
-const originText = document.querySelector(".sample-text").innerHTML;
+const originText = document.querySelector(".sample-text");
 
 const resetButton = document.querySelector(".start-button");
 const theTimer = document.querySelector(".timer");
@@ -33,9 +33,9 @@ function runTimer() {
 // match text with provided text
 function spellCheck() {
   let textEntered = testArea.value;
-  let originTextMatch = originText.substring(0, textEntered.length);
+  let originTextMatch = originText.innerHTML.substring(0, textEntered.length);
 
-  if(textEntered == originText) {
+  if(textEntered == originText.innerHTML) {
     clearInterval(interval);
     testWrapper.style.borderColor = "green";
   } else {
