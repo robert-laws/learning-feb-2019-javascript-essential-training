@@ -10,8 +10,8 @@
 * [Functions and Objects](#functions-and-objects)
 * [Javascript and the DOM: Part 1](#javascript-and-the-dom-part-1)
 * [Javascript and the DOM: Part 2](#javascript-and-the-dom-part-2)
-* [Loops](loops)
-* [Validating and Minifying Javascript](validating-and-minifying-javascript)
+* [Loops](#loops)
+* [Validating and Minifying Javascript](#validating-and-minifying-javascript)
 
 ---
 
