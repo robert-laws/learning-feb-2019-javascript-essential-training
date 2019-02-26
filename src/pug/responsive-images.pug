@@ -3,3 +3,28 @@ extends layouts/default.pug
 block content
   main
     h1 Responsive Images
+
+    p This example shows how it's possible to loop through a set of images and present the user with an image sized appropriately for their device size.
+
+    h6 HTML5 tools for responsive development
+
+    p HTML5 introduces new attributes for responsive design. This is called 
+      span.code srcset
+      |, which allows a comma separated list of possible image sources. Also available is 
+      span.code sizes
+      |, which allows a comma separated list of possible source sizes.
+
+      +codeMulti('HTML', '<img src="images/large-image-03-800.jpg" alt="large image" data-type="showcase" srcset="images/large-image-03-400.jpg 400w,images/large-image-03-800.jpg 800w,images/large-image-03-1200.jpg 1200w,images/large-image-03-1600.jpg 1600w,images/large-image-03-2000.jpg 2000w" sizes="100vw">')
+
+    hr
+
+    h6 Responsive Image Area
+
+    section.responsive-images
+      .responsive-images__image
+        img(src="images/large-image-01-800.jpg" alt="large image" data-type="showcase")
+      .responsive-images__image
+        img(src="images/large-image-02-800.jpg" alt="large image" data-type="showcase")
+      .responsive-images__image
+        img(src="images/large-image-03-800.jpg" alt="large image" data-type="showcase")
+

@@ -1,0 +1,17 @@
+.responsive-images {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  
+  border: 1px solid $color-code-border;
+
+  &__image {
+    flex: 1;
+    width: 700px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
