@@ -4,7 +4,8 @@
   "description": "Code along with Javascript Essential Training - lynda.com",
   "main": "gulpfile.js",
   "scripts": {
-    "default": "gulp default"
+    "default": "gulp default",
+    "clean": "gulp clean"
   },
   "repository": {
     "type": "git",
