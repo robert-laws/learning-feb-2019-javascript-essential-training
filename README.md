@@ -65,12 +65,14 @@ document.querySelector("#dom-section-title").style.cssText = "color: green; marg
 Event Listeners and passing arguments and the element (e) that help the event interaction. This is done by using an anonymous function in the `.addEventListener()` function call.
 
 ```javascript
-function changeLinkText(e, link) {
-  e.preventDefault();
-  link.innerHTML = "This has been clicked...";
+var button = document.querySelector("#button");
+
+function changeLinkText(event, element) {
+  event.preventDefault();
+  element.innerHTML = "This has been clicked...";
 }
 
-CHANGE_COLOR.addEventListener('click', function(e) {
+button.addEventListener('click', function(e) {
   changeLinkText(e, this);
 }, false);
 ```
