@@ -79,4 +79,45 @@ button.addEventListener('click', function(e) {
 
 ## Loops
 
+Iterating over data is an extremely common practice in programming. Javascript's main looping tool is the `for` loop. Also, the keywords `break` and `continue` are very useful for controlling the looping logic.
+
+Example of a `break` statement that will exit the loop.
+
+```javascript
+var myNumber = 4;
+var iterator = 1;
+
+function getRandom() {
+  var randomNumber = Math.floor(Math.random() * 10);
+  return randomNumber;
+}
+
+while (iterator < 25) {
+  var n = getRandom();
+  if(n == myNumber) {
+    break;
+  }
+  iterator++;
+}
+
+console.log(iterator == 25 ? "After " + iterator + " tries, I can't match my number." : "It took " + iterator + " times to randomly match my number.");
+```
+
+Example of a `continue` statement that will return the loop to the beginning of the next iteration.
+
+```javascript
+var evenNumbers = [];
+
+for(var i = 1; i <= 10; i++) {
+  if(i % 2 == 1) {
+    continue;
+  }
+  evenNumbers.push(i);
+}
+
+evenNumbers; // [2, 4, 6, 8, 10]
+```
+
 ## Validating and Minifying Javascript
+
+There are several tools that help validate and minify javascript. Validation is done with a tool like **JSHint** or **ESLint**. Minifying is done using a tool that removes all line breaks and extra white space in a javascript file.
